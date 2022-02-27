@@ -11,7 +11,7 @@ Parameters:
     Type: 'AWS::EC2::KeyPair::KeyName'
 
   InstanceType:
-    Description: EC2 instance type (with default AllowedValues)
+    Description: EC2 instance type ( with default AllowedValues )
     Type: String
     Default: t2.micro
     AllowedValues: #possible values

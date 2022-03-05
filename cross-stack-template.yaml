@@ -67,6 +67,7 @@ Resources:
     Properties:
       GroupDescription: !Ref SecurityGroupDescription
       VpcId: !ImportValue  SampleNetworkCrossStack-VPCID
+         
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
@@ -89,9 +90,9 @@ Outputs:
     Value: !Join ["", ["http://", !GetAtt EC2Instance.PublicDnsName, ":80"]]
     Description: URL for the apache web server
 
-  # EC2PrivateIp:
-  #  Description: Private IP of the EC2Instance
-  #  Value: !GetAtt EC2Instance.PrivateIP
+  EC2PrivateIp:
+   Description: Private IP of the EC2Instance
+   Value: !GetAtt EC2Instance.PrivateIp
       
   EC2DnsName:
    Description: The DNS name of the EC2Instance
